@@ -1,4 +1,4 @@
-package com.itheima.test;
+ package com.itheima.test;
 
 import com.itheima.mapper.BrandMapper;
 import com.itheima.mapper.UserMapper;
