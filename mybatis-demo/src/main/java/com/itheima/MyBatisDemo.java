@@ -2,6 +2,7 @@ package com.itheima;
 
 
 import com.itheima.mapper.BrandMapper;
+import com.itheima.mapper.TestMapper;
 import com.itheima.pojo.Brand;
 import com.itheima.pojo.User;
 import org.apache.ibatis.io.Resources;
@@ -30,8 +31,11 @@ public class MyBatisDemo {
         //3. 执行sql
         //List<User> users = sqlSession.selectList("test.selectAll");
         BrandMapper brandMapper = sqlSession.getMapper(BrandMapper.class);
+        TestMapper tt = sqlSession.getMapper(TestMapper.class);
+        List<Brand> tts = tt.selectAll();
         List<Brand> brands = brandMapper.selectAll();
         System.out.println(brands);
+        System.out.println(tts);
         //4. 释放资源
         sqlSession.close();
 

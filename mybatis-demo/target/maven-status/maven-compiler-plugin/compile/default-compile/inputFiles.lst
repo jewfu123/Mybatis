@@ -1,6 +1,7 @@
-/Users/fuhong/Documents/框架资料/阶段三_javaweb/阶段三_javaweb/day05-Mybatis/02-代码/mybatis-demo/src/main/java/com/itheima/mapper/UserMapper.java
-/Users/fuhong/Documents/框架资料/阶段三_javaweb/阶段三_javaweb/day05-Mybatis/02-代码/mybatis-demo/src/main/java/com/itheima/MyBatisDemo.java
-/Users/fuhong/Documents/框架资料/阶段三_javaweb/阶段三_javaweb/day05-Mybatis/02-代码/mybatis-demo/src/main/java/com/itheima/MyBatisDemo2.java
-/Users/fuhong/Documents/框架资料/阶段三_javaweb/阶段三_javaweb/day05-Mybatis/02-代码/mybatis-demo/src/main/java/com/itheima/mapper/BrandMapper.java
-/Users/fuhong/Documents/框架资料/阶段三_javaweb/阶段三_javaweb/day05-Mybatis/02-代码/mybatis-demo/src/main/java/com/itheima/pojo/Brand.java
-/Users/fuhong/Documents/框架资料/阶段三_javaweb/阶段三_javaweb/day05-Mybatis/02-代码/mybatis-demo/src/main/java/com/itheima/pojo/User.java
+/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/src/main/java/com/itheima/pojo/Brand.java
+/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/src/main/java/com/itheima/pojo/User.java
+/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/src/main/java/com/itheima/mapper/BrandMapper.java
+/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/src/main/java/com/itheima/mapper/UserMapper.java
+/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/src/main/java/com/itheima/MyBatisDemo2.java
+/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/src/main/java/com/itheima/MyBatisDemo.java
+/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/src/main/java/com/itheima/mapper/test.java

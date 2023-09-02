@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.itheima.test.UserMapperTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.18 s <<< FAILURE! - in com.itheima.test.UserMapperTest
-com.itheima.test.UserMapperTest.testSelect  Time elapsed: 0.071 s  <<< ERROR!
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.279 s <<< FAILURE! - in com.itheima.test.UserMapperTest
+com.itheima.test.UserMapperTest.testSelect  Time elapsed: 0.131 s  <<< ERROR!
 org.apache.ibatis.exceptions.PersistenceException: 
 
 ### Error querying database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'param2' not found. Available parameters are [arg0, collection]
@@ -54,18 +54,14 @@ Caused by: org.apache.ibatis.binding.BindingException: Parameter 'param2' not fo
 	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
 	... 35 more
 
-com.itheima.test.UserMapperTest.testSelectById  Time elapsed: 0.105 s  <<< ERROR!
+com.itheima.test.UserMapperTest.testSelectById  Time elapsed: 0.121 s  <<< ERROR!
 org.apache.ibatis.exceptions.PersistenceException: 
 
-### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### Error querying database.  Cause: java.sql.SQLException: The connection property 'useSSL' only accepts values of the form: 'true', 'false', 'yes' or 'no'. The value 'false&characterEncoding=UTF-8' is not in this set.
 ### The error may exist in com/itheima/mapper/UserMapper.java (best guess)
 ### The error may involve com.itheima.mapper.UserMapper.selectById
 ### The error occurred while executing a query
-### Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### Cause: java.sql.SQLException: The connection property 'useSSL' only accepts values of the form: 'true', 'false', 'yes' or 'no'. The value 'false&characterEncoding=UTF-8' is not in this set.
 	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
 	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:149)
 	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
@@ -103,20 +99,17 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
-	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
-	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2221)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2016)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+Caused by: java.sql.SQLException: The connection property 'useSSL' only accepts values of the form: 'true', 'false', 'yes' or 'no'. The value 'false&characterEncoding=UTF-8' is not in this set.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:898)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:887)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:861)
+	at com.mysql.jdbc.ConnectionPropertiesImpl$ConnectionProperty.validateStringValues(ConnectionPropertiesImpl.java:314)
+	at com.mysql.jdbc.ConnectionPropertiesImpl$BooleanConnectionProperty.initializeFrom(ConnectionPropertiesImpl.java:91)
+	at com.mysql.jdbc.ConnectionPropertiesImpl$ConnectionProperty.initializeFrom(ConnectionPropertiesImpl.java:216)
+	at com.mysql.jdbc.ConnectionPropertiesImpl.initializeProperties(ConnectionPropertiesImpl.java:2538)
+	at com.mysql.jdbc.ConnectionImpl.initializeDriverProperties(ConnectionImpl.java:3134)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:760)
 	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -143,14 +136,4 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
 	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
 	... 35 more
-Caused by: java.net.ConnectException: Connection refused (Connection refused)
-	at java.net.PlainSocketImpl.socketConnect(Native Method)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
-	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
-	... 64 more
 
