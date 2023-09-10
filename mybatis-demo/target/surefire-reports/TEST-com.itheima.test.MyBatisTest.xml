@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.itheima.test.MyBatisTest" time="1.5" tests="1" errors="1" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.itheima.test.MyBatisTest" time="0.989" tests="1" errors="1" skipped="0" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -7,7 +7,7 @@
     <property name="java.specification.version" value="1.8"/>
     <property name="sun.cpu.isalist" value=""/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/test-classes:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes:/Users/fuhong/.m2/repository/org/mybatis/mybatis/3.5.5/mybatis-3.5.5.jar:/Users/fuhong/.m2/repository/mysql/mysql-connector-java/5.1.46/mysql-connector-java-5.1.46.jar:/Users/fuhong/.m2/repository/junit/junit/4.13/junit-4.13.jar:/Users/fuhong/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/fuhong/.m2/repository/org/slf4j/slf4j-api/1.7.20/slf4j-api-1.7.20.jar:/Users/fuhong/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/Users/fuhong/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:"/>
+    <property name="java.class.path" value="/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/test-classes:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes:/Users/fuhong/.m2/repository/org/mybatis/mybatis/3.5.5/mybatis-3.5.5.jar:/Users/fuhong/.m2/repository/mysql/mysql-connector-java/5.1.46/mysql-connector-java-5.1.46.jar:/Users/fuhong/.m2/repository/junit/junit/4.13/junit-4.13.jar:/Users/fuhong/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/fuhong/.m2/repository/org/slf4j/slf4j-api/1.7.20/slf4j-api-1.7.20.jar:/Users/fuhong/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/Users/fuhong/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/Users/fuhong/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/Users/fuhong/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar:"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
@@ -17,9 +17,9 @@
     <property name="user.country" value="CN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib"/>
-    <property name="sun.java.command" value="/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/surefire/surefirebooter-20230723151748960_3.jar /Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/surefire 2023-07-23T15-17-43_904-jvmRun1 surefire-20230723151748960_1tmp surefire_0-20230723151748960_2tmp"/>
+    <property name="sun.java.command" value="/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/surefire/surefirebooter-20230902200204847_3.jar /Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/surefire 2023-09-02T20-01-59_777-jvmRun1 surefire-20230902200204847_1tmp surefire_0-20230902200204847_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="surefire.test.class.path" value="/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/test-classes:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes:/Users/fuhong/.m2/repository/org/mybatis/mybatis/3.5.5/mybatis-3.5.5.jar:/Users/fuhong/.m2/repository/mysql/mysql-connector-java/5.1.46/mysql-connector-java-5.1.46.jar:/Users/fuhong/.m2/repository/junit/junit/4.13/junit-4.13.jar:/Users/fuhong/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/fuhong/.m2/repository/org/slf4j/slf4j-api/1.7.20/slf4j-api-1.7.20.jar:/Users/fuhong/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/Users/fuhong/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:"/>
+    <property name="surefire.test.class.path" value="/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/test-classes:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes:/Users/fuhong/.m2/repository/org/mybatis/mybatis/3.5.5/mybatis-3.5.5.jar:/Users/fuhong/.m2/repository/mysql/mysql-connector-java/5.1.46/mysql-connector-java-5.1.46.jar:/Users/fuhong/.m2/repository/junit/junit/4.13/junit-4.13.jar:/Users/fuhong/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/fuhong/.m2/repository/org/slf4j/slf4j-api/1.7.20/slf4j-api-1.7.20.jar:/Users/fuhong/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/Users/fuhong/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/Users/fuhong/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/Users/fuhong/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/fuhong"/>
     <property name="user.language" value="zh"/>
@@ -32,7 +32,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/surefire/surefirebooter-20230723151748960_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/surefire/surefirebooter-20230902200204847_3.jar"/>
     <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/classes"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
@@ -62,23 +62,12 @@
     <property name="java.class.version" value="52.0"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="testSelectByCondition" classname="com.itheima.test.MyBatisTest" time="1.375">
-    <error message="&#10;### Error querying database.  Cause: java.sql.SQLException: The connection property &apos;useSSL&apos; only accepts values of the form: &apos;true&apos;, &apos;false&apos;, &apos;yes&apos; or &apos;no&apos;. The value &apos;false&amp;characterEncoding=UTF-8&apos; is not in this set.&#10;### The error may exist in com/itheima/mapper/BrandMapper.xml&#10;### The error may involve com.itheima.mapper.BrandMapper.selectByCondition&#10;### The error occurred while executing a query&#10;### Cause: java.sql.SQLException: The connection property &apos;useSSL&apos; only accepts values of the form: &apos;true&apos;, &apos;false&apos;, &apos;yes&apos; or &apos;no&apos;. The value &apos;false&amp;characterEncoding=UTF-8&apos; is not in this set." type="org.apache.ibatis.exceptions.PersistenceException"><![CDATA[org.apache.ibatis.exceptions.PersistenceException: 
-
-### Error querying database.  Cause: java.sql.SQLException: The connection property 'useSSL' only accepts values of the form: 'true', 'false', 'yes' or 'no'. The value 'false&characterEncoding=UTF-8' is not in this set.
-### The error may exist in com/itheima/mapper/BrandMapper.xml
-### The error may involve com.itheima.mapper.BrandMapper.selectByCondition
-### The error occurred while executing a query
-### Cause: java.sql.SQLException: The connection property 'useSSL' only accepts values of the form: 'true', 'false', 'yes' or 'no'. The value 'false&characterEncoding=UTF-8' is not in this set.
-	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:149)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at com.sun.proxy.$Proxy7.selectByCondition(Unknown Source)
-	at com.itheima.test.MyBatisTest.testSelectByCondition(MyBatisTest.java:108)
+  <testcase name="testSelectByCondition" classname="com.itheima.test.MyBatisTest" time="0.865">
+    <error message="Type interface com.itheima.mapper.BrandMapper is not known to the MapperRegistry." type="org.apache.ibatis.binding.BindingException"><![CDATA[org.apache.ibatis.binding.BindingException: Type interface com.itheima.mapper.BrandMapper is not known to the MapperRegistry.
+	at org.apache.ibatis.binding.MapperRegistry.getMapper(MapperRegistry.java:47)
+	at org.apache.ibatis.session.Configuration.getMapper(Configuration.java:823)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.getMapper(DefaultSqlSession.java:291)
+	at com.itheima.test.MyBatisTest.testSelectByCondition(MyBatisTest.java:102)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -107,43 +96,6 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.sql.SQLException: The connection property 'useSSL' only accepts values of the form: 'true', 'false', 'yes' or 'no'. The value 'false&characterEncoding=UTF-8' is not in this set.
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:898)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:887)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:861)
-	at com.mysql.jdbc.ConnectionPropertiesImpl$ConnectionProperty.validateStringValues(ConnectionPropertiesImpl.java:314)
-	at com.mysql.jdbc.ConnectionPropertiesImpl$BooleanConnectionProperty.initializeFrom(ConnectionPropertiesImpl.java:91)
-	at com.mysql.jdbc.ConnectionPropertiesImpl$ConnectionProperty.initializeFrom(ConnectionPropertiesImpl.java:216)
-	at com.mysql.jdbc.ConnectionPropertiesImpl.initializeProperties(ConnectionPropertiesImpl.java:2538)
-	at com.mysql.jdbc.ConnectionImpl.initializeDriverProperties(ConnectionImpl.java:3134)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:760)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:208)
-	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.doGetConnection(UnpooledDataSource.java:224)
-	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.doGetConnection(UnpooledDataSource.java:219)
-	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.getConnection(UnpooledDataSource.java:95)
-	at org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:432)
-	at org.apache.ibatis.datasource.pooled.PooledDataSource.getConnection(PooledDataSource.java:89)
-	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection(JdbcTransaction.java:139)
-	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.getConnection(JdbcTransaction.java:61)
-	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
-	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
-	... 35 more
 ]]></error>
     <system-out><![CDATA[[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.l.LogFactory&amp#27;[0;39m - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.io.VFS&amp#27;[0;39m - Class not found: org.jboss.vfs.VFS 
@@ -154,51 +106,33 @@ Caused by: java.sql.SQLException: The connection property 'useSSL' only accepts 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Find JAR URL: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/pojo 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Not a JAR: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/pojo 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: Brand.class 
+[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: Test.class 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: User.class 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Listing file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/pojo 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Find JAR URL: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/pojo/Brand.class 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Not a JAR: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/pojo/Brand.class 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: ����&amp#0;&amp#0;&amp#0;4&amp#0;P 
+[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Find JAR URL: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/pojo/Test.class 
+[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Not a JAR: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/pojo/Test.class 
+[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: ����&amp#0;&amp#0;&amp#0;4&amp#0;P 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Find JAR URL: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/pojo/User.class 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Not a JAR: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/pojo/User.class 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: ����&amp#0;&amp#0;&amp#0;4&amp#0;I 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.ResolverUtil&amp#27;[0;39m - Checking to see if class com.itheima.pojo.Brand matches criteria [is assignable to Object] 
+[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.ResolverUtil&amp#27;[0;39m - Checking to see if class com.itheima.pojo.Test matches criteria [is assignable to Object] 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.ResolverUtil&amp#27;[0;39m - Checking to see if class com.itheima.pojo.User matches criteria [is assignable to Object] 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.d.p.PooledDataSource&amp#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.d.p.PooledDataSource&amp#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.d.p.PooledDataSource&amp#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.d.p.PooledDataSource&amp#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Find JAR URL: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/mapper 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Not a JAR: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/mapper 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: BrandMapper.class 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: BrandMapper.xml 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: test.class 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: test.xml 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: UserMapper.class 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: UserMapper.xml 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Listing file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/mapper 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Find JAR URL: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/mapper/BrandMapper.class 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Not a JAR: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/mapper/BrandMapper.class 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: ����&amp#0;&amp#0;&amp#0;4&amp#0;&amp#27;&amp#7;&amp#0;&amp#25;&amp#7;&amp#0;&amp#26;&amp#1;&amp#0;	selectAll&amp#1;&amp#0;&amp#18;()Ljava/util/List;&amp#1;&amp#0;	Signature&amp#1;&amp#0;,()Ljava/util/List<Lcom/itheima/pojo/Brand;>;&amp#1;&amp#0; 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Find JAR URL: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/mapper/BrandMapper.xml 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Not a JAR: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/mapper/BrandMapper.xml 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: <?xml version="1.0" encoding="UTF-8" ?> 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Find JAR URL: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/mapper/test.class 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Not a JAR: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/mapper/test.class 
+[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Find JAR URL: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/h2mapper 
+[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Not a JAR: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/h2mapper 
+[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: ComponentMapper.class 
+[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Listing file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/h2mapper 
+[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Find JAR URL: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/h2mapper/ComponentMapper.class 
+[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Not a JAR: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/h2mapper/ComponentMapper.class 
 [DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: ����&amp#0;&amp#0;&amp#0;4&amp#0;&amp#11;&amp#7;&amp#0;	&amp#7;&amp#0; 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Find JAR URL: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/mapper/test.xml 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Not a JAR: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/mapper/test.xml 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: <?xml version="1.0" encoding="UTF-8"?> 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Find JAR URL: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/mapper/UserMapper.class 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Not a JAR: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/mapper/UserMapper.class 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: ����&amp#0;&amp#0;&amp#0;4&amp#0;&amp#23;&amp#7;&amp#0;&amp#21;&amp#7;&amp#0;&amp#22;&amp#1;&amp#0;	selectAll&amp#1;&amp#0;&amp#18;()Ljava/util/List;&amp#1;&amp#0;	Signature&amp#1;&amp#0;+()Ljava/util/List<Lcom/itheima/pojo/User;>;&amp#1;&amp#0; 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Find JAR URL: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/mapper/UserMapper.xml 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Not a JAR: file:/Users/fuhong/eclipse-workspace/Mybatis/mybatis-demo/target/classes/com/itheima/mapper/UserMapper.xml 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.DefaultVFS&amp#27;[0;39m - Reader entry: <?xml version="1.0" encoding="UTF-8" ?> 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.ResolverUtil&amp#27;[0;39m - Checking to see if class com.itheima.mapper.BrandMapper matches criteria [is assignable to Object] 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.ResolverUtil&amp#27;[0;39m - Checking to see if class com.itheima.mapper.test matches criteria [is assignable to Object] 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.ResolverUtil&amp#27;[0;39m - Checking to see if class com.itheima.mapper.UserMapper matches criteria [is assignable to Object] 
-[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.t.j.JdbcTransaction&amp#27;[0;39m - Opening JDBC Connection 
+[DEBUG]  &amp#27;[36m[main]&amp#27;[0;39m &amp#27;[1;32mo.a.i.i.ResolverUtil&amp#27;[0;39m - Checking to see if class com.itheima.h2mapper.ComponentMapper matches criteria [is assignable to Object] 
 ]]></system-out>
   </testcase>
 </testsuite>

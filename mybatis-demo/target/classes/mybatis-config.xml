@@ -5,7 +5,7 @@
 <configuration>
 
     <typeAliases>
-        <package name="com.itheima.pojo"/>
+        <package name="com.itheima.h2pojo"/>
     </typeAliases>
     
     <!--
@@ -17,7 +17,7 @@
             <dataSource type="POOLED">
                 <!--数据库连接信息-->
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql:///mybatis?useSSL=false%26characterEncoding=UTF-8"/>
+                <property name="url" value="jdbc:mysql:///mybatis?useSSL=false"/>
                 <property name="username" value="root"/>
                 <property name="password" value="123456"/>
             </dataSource>
@@ -33,13 +33,25 @@
                 <property name="password" value="123456"/>
             </dataSource>
         </environment>
+        
+        <environment id="testh2">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <!--数据库连接信息-->
+                <property name="driver" value="org.h2.jdbcx.JdbcDataSource"/>
+                <property name="url" value="jdbc:h2:/Users/fuhong/Downloads/keycloak-legacy-18.0.2/standalone/data/keycloak;AUTO_SERVER=TRUE"/>
+                <property name="username" value="sa"/>
+                <property name="password" value="sa"/>
+            </dataSource>
+        </environment>
     </environments>
     <mappers>
         <!--加载sql映射文件-->
        <!-- <mapper resource="com/itheima/mapper/UserMapper.xml"/>-->
 
         <!--Mapper代理方式-->
-        <package name="com.itheima.mapper"/>
+        <!-- <package name="com.itheima.mapper"/> -->
+        <package name="com.itheima.h2mapper"/>
 
     </mappers>
 

@@ -1,0 +1,10 @@
+com/itheima/h2mapper/ComponentMapper.class
+com/itheima/MyBatisDemo2.class
+com/itheima/MyBatisDemo.class
+com/itheima/mapper/UserMapper.class
+com/itheima/mapper/BrandMapper.class
+com/itheima/mapper/TestMapper.class
+com/itheima/pojo/User.class
+com/itheima/pojo/Test.class
+com/itheima/pojo/Brand.class
+com/itheima/h2pojo/Component.class
