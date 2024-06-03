@@ -135,16 +135,99 @@ in mapper.xml
 #{id};
 ```
 
+#### Mybatis Search by SQL.
+1. muti search.
+	in interface java.
+	```JAVA
+	List<Brand> selectByCondition(@Param("status")int status, @Param("companyName")String companyName, @Param("brandName")String brandName);
 
+	List<Brand> selectByCondition(Brand brand);
 
+	List<Brand> selectByCondition(Map map);
+	```
+	in Mapper XML file
+	```xml
+	<select id="selectByCondition" resultMap="brandResultMap">
+		select * from tb_brand where
+			status=#{status}
+			and company_name like #{companyName}
+			and brand_name like #{brandName}
+	</select>
+	```
 
+2. SQL语句设置多个参数有几种方式？
+	1）散装参数：
+		需要使用 @Param("sql中的参数占位符名称")
 
+	2）实体类封装参数：
+		*只需要保证SQL中的参数名和实体类属性名对应上，即可设置成功
 
+	3）map集合：
+		*只需要保证SQL中的参数名和map集合的键的名称对应上，即可设置成功
 
+3. 动态SQL
+	>> 多条件动态查询：
+	```xml
+	<select id="selectByCondition" resultMap="brandResultMap">
+		select * from tb_brand where
+			status=#{status}
+			and company_name like #{companyName}
+			and brand_name like #{brandName}
+	</select>
+	```
+	> if
+	```xml
+		<select id="selectByCondition" resultMap="brandResultMap">
+			select * from tb_brand //where 1=1
+			<where>
+				<if test="status != null">
+					status=#{status}
+				</if>
+				<if test="company_name != null and company_name != ''">
+					and company_name like #{companyName}
+				</if>
+				<if test="brand_name != null and brand_name != ''">
+					and brand_name like #{brandName}
+				</if>
+			</where>
+		</select>
+		```
+		in java file
+		```java
+		Map map = new HashMap();
+		map.put('status', status);
+		map.put('companyName', companyName);
+		map.put('brandName', brandName);
+		```
+	> chose(when, otherwise)
+	> trim(where, set)
+	> foreach
 
-
-
-
+	>> 单条件动态查询：
+	```xml
+	<select id="selectByConditionSingle" resultMap="brandResultMap">
+		select * from tb_brand //where
+		<where>
+			<choose>
+				<when test="status!=null">
+					status=#{status}
+				</when>
+				<when test="companyName!=null and companyName!=''">
+					company_name like #{companyName}
+				</when>
+				<when test="brandName!=null and brandName!=''">
+					brand_name like #{brandName}
+				</when>
+				<otherwise>
+					brand_name like #{brandName}
+				</otherwise>
+			</choose>
+		</where>
+	</select>
+	```
+	```java
+	List<Brand> selectByConditionSingle(Brand brand);
+	```
 
 
 
