@@ -117,7 +117,7 @@ in Mapper.xml
 </select>
 ```
 
-#### interfact pass var
+#### interface pass var
 in mapper.java
 Brand selectBy(int id);
 
