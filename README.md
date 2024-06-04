@@ -295,7 +295,7 @@ in mapper.xml
 	*注解仅仅完成简单的操作，复杂的操作，还是需要用配置文件的方式。
 
 8. Mybatis 代码生成器
-	1）添加依赖：
+	1) 添加依赖：
 	```xml
 	<dependency>
 		<groupId>com.baomidou</groupId>
