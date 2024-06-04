@@ -230,13 +230,15 @@ in mapper.xml
 	```
 
 4. 主键返回Id的设定：
+	```xml
 	<insert id="addOrder" useGeneratedKeys="true" keyProperty="id">
 		insert into ...
 	</insert>
-
+	```
 	by getId() can get auto made id.
 
 5. 动态修改字段：
+	```xml
 	<update id="update">
 		update tb_brand
 		<set>
@@ -250,13 +252,15 @@ in mapper.xml
 		</set>
 		where id=#{id};
 	</update>
-
+	```
 6. 删除记录：
+	```xml
 	<deleted id="deleteById">
 		delete from tb_brand where id=#{id}
 	</deleted>
 
 	批量删除，动态生成问号和id:
+	```xml
 	<delete id="deleteByIds">
 		delete from tb_brand
 		where id in (?,?,?..)
@@ -271,7 +275,7 @@ in mapper.xml
 			#{id}
 		</foreach>
 	</delete>
-
+	```
 	*this ids used error, if it equal java's array name,it will back error message: can not found ids.
 	right is use "array" or set @Param -> change the map's default key name.
 
@@ -280,32 +284,35 @@ in mapper.xml
 
 
 7. 使用注解开发，比配置文件xml方式更方便：
+	```java
 	@Select("select * from tb_user where id=#{id}")
 	public User selectById(int id);
 
 	@Update
 	@Insert
 	@Delete
-
+	```
 	*注解仅仅完成简单的操作，复杂的操作，还是需要用配置文件的方式。
 
 8. Mybatis 代码生成器
 	1）添加依赖：
+	```xml
 	<dependency>
 		<groupId>com.baomidou</groupId>
 		<artifactId>mybatis-plus-generator</artifactId>
 		<version>3.4.1</version>
 	</dependency>
-
+	```
 	2) 添加模板依赖：
+	```xml
 	<dependency>
 		<groupId>org.apache.velocity</groupId>
 		<artifactId>velocity-engine-core</artifactId>
 		<version>2.3</version>
 	</dependency>
-
+	```
 	3) create Generator.java to execute:
-
+	```java
 	public class Generator {
 		public static void main(String[] args) {
 			AutoGenerator autoGenerator = new AutoGenerator();
@@ -356,10 +363,10 @@ in mapper.xml
 			autoGenerator.execute();
 		}
 	}
-
+	```
 
 	*baseMapper封装了数据表的基本操作，baseService也是同样，封装了基本操作，其对应的 impl文件，也继承了相应的操作，所以，大大降低了代码量。
-
+	```java
 	@Service
 	public class UserServiceImpl extends ServiceImpl<UserDao, User> implements IUserService {
 		public void save() {
@@ -375,3 +382,4 @@ in mapper.xml
 	void contextLoads() {
 		userService.get.../update/remove/delete..
 	}
+	```
