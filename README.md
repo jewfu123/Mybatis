@@ -229,28 +229,149 @@ in mapper.xml
 	List<Brand> selectByConditionSingle(Brand brand);
 	```
 
+4. 主键返回Id的设定：
+	<insert id="addOrder" useGeneratedKeys="true" keyProperty="id">
+		insert into ...
+	</insert>
+
+	by getId() can get auto made id.
+
+5. 动态修改字段：
+	<update id="update">
+		update tb_brand
+		<set>
+			<if test="brandName!=null and brandName!="">
+				brand_name = #{brandName},
+			</if>
+			<if test="companyName!=null and companyName!="">
+				company_name = #{companyName},
+			</if>
+			...
+		</set>
+		where id=#{id};
+	</update>
+
+6. 删除记录：
+	<deleted id="deleteById">
+		delete from tb_brand where id=#{id}
+	</deleted>
+
+	批量删除，动态生成问号和id:
+	<delete id="deleteByIds">
+		delete from tb_brand
+		where id in (?,?,?..)
+	</delete>
+
+	-----
+
+	<delete id="deleteByIds">
+		delete from tb_brand
+		where id in
+		<foreach collection="ids" item="id" separator="," open="(" close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+	*this ids used error, if it equal java's array name,it will back error message: can not found ids.
+	right is use "array" or set @Param -> change the map's default key name.
+
+	@Param("username") String username,
+	*this username must equal sql's vars name.
 
 
+7. 使用注解开发，比配置文件xml方式更方便：
+	@Select("select * from tb_user where id=#{id}")
+	public User selectById(int id);
+
+	@Update
+	@Insert
+	@Delete
+
+	*注解仅仅完成简单的操作，复杂的操作，还是需要用配置文件的方式。
+
+8. Mybatis 代码生成器
+	1）添加依赖：
+	<dependency>
+		<groupId>com.baomidou</groupId>
+		<artifactId>mybatis-plus-generator</artifactId>
+		<version>3.4.1</version>
+	</dependency>
+
+	2) 添加模板依赖：
+	<dependency>
+		<groupId>org.apache.velocity</groupId>
+		<artifactId>velocity-engine-core</artifactId>
+		<version>2.3</version>
+	</dependency>
+
+	3) create Generator.java to execute:
+
+	public class Generator {
+		public static void main(String[] args) {
+			AutoGenerator autoGenerator = new AutoGenerator();
+
+			autoGenerator.set...
+							setPackageInfo
+							setGlobalConfig
+							setDataSource
+							setStrategy
+							setTemplateEngine
+							setTemplate
+							setConfig
+							setCfg
+			DataSourceConfig dataSource = new DataSourceConfig();
+			dataSource.setDriverName("com.mysql.cj.jdbc.Driver");
+			dataSource.setUrl("jdbc:mysql://localhost:3306/mybatisplus_db?serverTimezone=UTC");
+			dataSource.setUsername("root");
+			dataSource.setPassword("");
+			autoGenerator.setDataSource(dataSource);
+
+			//set global
+			GlobalConfig globalConfig = new GlobalConfig();
+			globalConfig.setOutDir(System.getProperty("user.dir")+"/mybatisplus_04_generator/src/main/java");
+			globalConfig.setOpen(false);
+			globalConfig.setAuthor("jewfu");
+			globalConfig.setFileOverride(true);
+			globalConfig.setMapperName("%sDao");
+			globalConfig.setIdType(IdType.ASSIGN_ID);
+			autoGenerator.setGlobalConfig(globalConfig);
+
+			//set package info:
+			PackageConfig packageInfo = new PackageConfig();
+			packageInfo.setParent("com.itheima");
+			packageInfo.setEntity("domain");
+			packageInfo.setMapper("dao");
+			autoGenerator.setPackageInfo(packageInfo);
+
+			// policy set:
+			StrategyConfig strategyConfig = new StrategyConfig();
+			strategyConfig.setInclude("tbl_user");
+			strategyConfig.setTablePrefix("tbl_");
+			strategyConfig.setRestControllerStyle(true);
+			strategyConfig.setVersionFieldName("version");
+			strategyConfig.setLogicDeleteFieldName("deleted");
+			strategyConfig.setEntityLombokModel("true");
+			autoGenerator.setStrategy(strategyConfig);
+
+			autoGenerator.execute();
+		}
+	}
 
 
+	*baseMapper封装了数据表的基本操作，baseService也是同样，封装了基本操作，其对应的 impl文件，也继承了相应的操作，所以，大大降低了代码量。
+
+	@Service
+	public class UserServiceImpl extends ServiceImpl<UserDao, User> implements IUserService {
+		public void save() {
+			// ????  -> 当书写其他逻辑时，这些代码就没有用了，全部交由自己控制，所以，常常会删除掉。
+			dao.save();
+		}
+	}
 
 
+	private IUserService userService;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	@Test
+	void contextLoads() {
+		userService.get.../update/remove/delete..
+	}
