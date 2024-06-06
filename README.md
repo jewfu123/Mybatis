@@ -383,3 +383,110 @@ in mapper.xml
 		userService.get.../update/remove/delete..
 	}
 	```
+-------------------------------- Mybatis Plus -------------------------------
+## Mybatis Plus
+1. 引入依赖 Mybatis-Plus-Starter
+
+2. 创建Dao文件
+	in interface java file:
+	```java
+	@Mapper
+	public interface UserDao extends BaseMapper<User> {
+
+	}
+	```
+	
+	in import Dao java file:
+	```java
+	@Autowired
+	private UserDao userDao;
+
+	userDao -> CRUD Lamder select; paginate show;
+
+	```
+
+## 引入Lombok坐标
+	*lombok = getter() + setter()
+	@lombok = @Getter + @Setter()
+	@Data = 除了构造方法外的所有注解，很高效
+	```XML
+	<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+	</dependency>
+
+	<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<version>1.18.12</version>
+		<scope>provided</scope>
+	</dependency>
+	```
+
+## 分页查询
+	```java
+	void testGetByPage() {
+		IPage page = new Page(currentPage, PageSize); *IPage is interface file, Page is class file.
+		userDao.selectPage(page, queryWrapper:null);
+	}
+	```
+	*创建MybatisPlus拦截器：
+
+	com.itheima.config.MpConfig.java
+	```java
+	@Configuration
+	public class MpConfig {
+		@Bean
+		public MybatisPlusInterceptor myInterceptor() {
+			MybatisPlusInterceptor mpInterceptor = new MybatisPlusInterceptor();
+			mpInterceptor.addInnerInterceptor(new PaginationInnerInterceptor());
+			return mpInterceptor;
+		}
+	}
+	```
+#### 配置文件中加入输出日志到控制台的配置：
+	in application.yml
+	```yaml
+	mybatis-plus:
+	  configuration:
+	    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+	```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
