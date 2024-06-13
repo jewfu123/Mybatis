@@ -454,7 +454,7 @@ in mapper.xml
 
 #### Mybatis与JPT JDBC连接池结合
 	1. 引入依赖
-	```pom
+```pom
 	<dependencies>
     <!-- MyBatis -->
     <dependency>
@@ -484,10 +484,10 @@ in mapper.xml
         <version>8.0.27</version>
     </dependency>
 	</dependencies>
-	```
+```
 
 	2.配置连接池和MyBatis
-	```xml
+```xml
 	<?xml version="1.0" encoding="UTF-8" ?>
 	<!DOCTYPE configuration
 	    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
@@ -509,9 +509,9 @@ in mapper.xml
 	        <mapper resource="org/mybatis/example/BlogMapper.xml" />
 	    </mappers>
 	</configuration>
-	```
+```
 	如果使用Spring框架，可以在application.properties或application.yml中配置HikariCP：
-	```properties
+```properties
 	# application.properties
 	spring.datasource.url=jdbc:mysql://localhost:3306/mydatabase
 	spring.datasource.username=root
@@ -519,9 +519,9 @@ in mapper.xml
 	spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 	spring.datasource.type=com.zaxxer.hikari.HikariDataSource
 	spring.datasource.hikari.maximum-pool-size=10
-	```
+```
 	3. 在Spring配置类中配置MyBatis：
-	```java
+```java
 	import org.apache.ibatis.session.SqlSessionFactory;
 	import org.mybatis.spring.SqlSessionFactoryBean;
 	import org.mybatis.spring.annotation.MapperScan;
@@ -543,17 +543,17 @@ in mapper.xml
 	        return sessionFactory.getObject();
 	    }
 	}
-	```
+```
 
 	4. 使用MyBatis进行数据库操作
 	定义Mapper接口和对应的XML映射文件。例如，定义一个简单的UserMapper接口：
-	```java
+```java
 	public interface UserMapper {
 	    User selectUser(int id);
 	}
-	```
+```
 	对应的XML映射文件UserMapper.xml：
-	```xml
+```xml
 	<?xml version="1.0" encoding="UTF-8" ?>
 	<!DOCTYPE mapper
 	    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
@@ -563,9 +563,9 @@ in mapper.xml
 	        SELECT * FROM users WHERE id = #{id}
 	    </select>
 	</mapper>
-	```
+```
 	然后在服务类中使用Mapper：
-	```java
+```java
 	import org.springframework.beans.factory.annotation.Autowired;
 	import org.springframework.stereotype.Service;
 
@@ -578,7 +578,7 @@ in mapper.xml
 	        return userMapper.selectUser(id);
 	    }
 	}
-	```
+```
 
 	通过这种方式，您可以将MyBatis与HikariCP等JDBC连接池结合使用，以实现高效的数据库操作。
 
