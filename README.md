@@ -452,15 +452,135 @@ in mapper.xml
 	    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 	```
 
+#### Mybatis与JPT JDBC连接池结合
+	1. 引入依赖
+	```pom
+	<dependencies>
+    <!-- MyBatis -->
+    <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis</artifactId>
+        <version>3.5.9</version>
+    </dependency>
 
+    <!-- MyBatis-Spring (如果使用Spring框架) -->
+    <dependency>
+        <groupId>org.mybatis.spring</groupId>
+        <artifactId>mybatis-spring</artifactId>
+        <version>2.0.7</version>
+    </dependency>
 
+    <!-- HikariCP -->
+    <dependency>
+        <groupId>com.zaxxer</groupId>
+        <artifactId>HikariCP</artifactId>
+        <version>5.0.1</version>
+    </dependency>
 
+    <!-- MySQL Connector (假设使用MySQL数据库) -->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.27</version>
+    </dependency>
+	</dependencies>
+	```
 
+	2.配置连接池和MyBatis
+	```xml
+	<?xml version="1.0" encoding="UTF-8" ?>
+	<!DOCTYPE configuration
+	    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+	<configuration>
+	    <environments default="development">
+	        <environment id="development">
+	            <transactionManager type="JDBC" />
+	            <dataSource type="POOLED">
+	                <property name="driver" value="com.mysql.cj.jdbc.Driver" />
+	                <property name="url" value="jdbc:mysql://localhost:3306/mydatabase" />
+	                <property name="username" value="root" />
+	                <property name="password" value="password" />
+	                <property name="poolMaximumActiveConnections" value="10" />
+	            </dataSource>
+	        </environment>
+	    </environments>
+	    <mappers>
+	        <mapper resource="org/mybatis/example/BlogMapper.xml" />
+	    </mappers>
+	</configuration>
+	```
+	如果使用Spring框架，可以在application.properties或application.yml中配置HikariCP：
+	```properties
+	# application.properties
+	spring.datasource.url=jdbc:mysql://localhost:3306/mydatabase
+	spring.datasource.username=root
+	spring.datasource.password=password
+	spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+	spring.datasource.type=com.zaxxer.hikari.HikariDataSource
+	spring.datasource.hikari.maximum-pool-size=10
+	```
+	3. 在Spring配置类中配置MyBatis：
+	```java
+	import org.apache.ibatis.session.SqlSessionFactory;
+	import org.mybatis.spring.SqlSessionFactoryBean;
+	import org.mybatis.spring.annotation.MapperScan;
+	import org.springframework.context.annotation.Bean;
+	import org.springframework.context.annotation.Configuration;
+	import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
+	import javax.sql.DataSource;
 
+	@Configuration
+	@MapperScan("com.example.mapper")
+	public class MyBatisConfig {
 
+	    @Bean
+	    public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
+	        SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
+	        sessionFactory.setDataSource(dataSource);
+	        sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath*:mapper/*.xml"));
+	        return sessionFactory.getObject();
+	    }
+	}
+	```
 
+	4. 使用MyBatis进行数据库操作
+	定义Mapper接口和对应的XML映射文件。例如，定义一个简单的UserMapper接口：
+	```java
+	public interface UserMapper {
+	    User selectUser(int id);
+	}
+	```
+	对应的XML映射文件UserMapper.xml：
+	```xml
+	<?xml version="1.0" encoding="UTF-8" ?>
+	<!DOCTYPE mapper
+	    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.example.mapper.UserMapper">
+	    <select id="selectUser" parameterType="int" resultType="com.example.domain.User">
+	        SELECT * FROM users WHERE id = #{id}
+	    </select>
+	</mapper>
+	```
+	然后在服务类中使用Mapper：
+	```java
+	import org.springframework.beans.factory.annotation.Autowired;
+	import org.springframework.stereotype.Service;
 
+	@Service
+	public class UserService {
+	    @Autowired
+	    private UserMapper userMapper;
+
+	    public User getUserById(int id) {
+	        return userMapper.selectUser(id);
+	    }
+	}
+	```
+
+	通过这种方式，您可以将MyBatis与HikariCP等JDBC连接池结合使用，以实现高效的数据库操作。
 
 
 
